@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS를 적용하기 위한 방법. 문서에 폰트 적용 -->
+    <style> 
+        body {
+            font-family: ubuntu, 나눔고딕코딩, Arial;
+        }
+    </style>
+</head>
+<body>
+    <!-- 태그 이름만 적고 TAB키를 누르면 알아서 태그를 만들어준다. -->
+    <h1>제목 태그와 문단 태그</h1>
+    <h2>용도에 적합한 태그 사용하기</h2>
+    <h3>용도에 적합한 태그 사용하기</h3>
+    <h4>용도에 적합한 태그 사용하기</h4>
+    <h5>용도에 적합한 태그 사용하기</h5>
+    <h6>용도에 적합한 태그 사용하기</h6>
+    <p>페이지나 섹션 주요 요소의 제목은 h1~h6 태그를 사용하고,
+        숫자가 높을수록 소제목이다.</p>
+    <p>p태그끼리는 자동 줄바꿈을 지원한다.
+        문단과 관계없이 원하는 만큼하기 위해서는 br태그를 사용하는 것이 효율적이다.</p>
+    <p>하지만, br태그는 열고 닫을 필요가 없다는 점에서 편하지만, 남용해서는 안된다.</p>
+    <p>br태그 검증하기<br><br><br>세번이후 작성 (줄바꿈이 세번 일어났다.)</p>
+    <!-- 간단한 입력 방법 emmet p*6 + 탭 형태로도 만들 수 있다-->
+    <p>
+        <hr>
+        <p>paragraph는 앞 뒤에 공백이 더 있다.</p>
+        <p>
+            강제 공백 넣어보기 연습.
+            이&nbsp;&nbsp;렇&nbsp;&nbsp;게&nbsp;&nbsp;하&nbsp;&nbsp;면&nbsp;&nbsp;공&nbsp;&nbsp;백&nbsp;&nbsp;이&nbsp;&nbsp;생&nbsp;&nbsp;긴&nbsp;&nbsp;다.
+            스페이스바로 여러번 쳐도 한칸만 띄워지는데, 강제로 2칸 3칸 늘리려면 스페이스바를 사용하는 것이 아니라,
+            nbsp를 사용해야 한다.
+        </p>
+    </p>
+</body>
+</html>
