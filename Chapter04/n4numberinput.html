@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Input Type Related to Numbers</h1>
+    <form action="#">
+        <!--화살표로 숫자 선택하는 것 min부터 max까지-->
+        <label for="numIp">number</label><br>
+        <input type="number" min="0" max="10" id="numIp">
+        <br><br>
+        <!--음량 모양-->
+        <label for="rgIp">range</label>
+        <input type="range" min="0" max="10" id="rgIp" step="0.1">
+        <br><br>
+        <label for="dtIp">date</label>
+        <input id="dtIp" type="date" min="2020-01-01" max="2025-12-31">
+        <br><br>
+        <button type="submit">제출</button>
+    </form>
+</body>
+</html>

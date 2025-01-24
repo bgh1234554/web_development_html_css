@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckInputTest</title>
+    <style>
+        body{
+            background: #00ff6a49;
+        }
+    </style>
+</head>
+<body>
+    <h1>input type related to check</h1>
+    <form action="#">
+        <h2>checkbox</h2>
+        <label for="cbIp"></label>광고성 정보 수신 동의
+        <input type="checkbox" id="cbIp" value="1" checked>
+        <label for="cbIp2"></label>광고성 정보 수신 동의2
+        <input type="checkbox" id="cbIp2" value="1">
+        <h2>radio</h2>
+        <!--같은 name으로 묶이면 하나만 선택이 가능하다.-->
+        <label for="f_apple">사과</label>
+        <input type="radio" id="f_apple" name="fruit" value="apple" checked>
+        <label for="f_orange">오렌지</label>
+        <input type="radio" id="f_orange" name="fruit" value="orange"></label>
+        <label for="f_grape">포도</label>
+        <input type="radio" id="f_grape" name="fruit" value="grape"></label>
+        <br>
+        <label for="f_watermelon">수박</label>
+        <input type="radio" id="f_watermelon" name="vegetable" value="watermelon"></label>
+        <label for="f_carrott">당근</label>
+        <input type="radio" id="f_carrott" name="vegetable" value="carrott"></label>
+        <label for="f_aubergine">가지</label>
+        <input type="radio" id="f_aubergine" name="vegetable" value="aubergine"></label>
+    </form>
+</body>
+</html>

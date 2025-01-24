@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>텍스트 관련 input</h1>
+    <form action="#">
+        <label for="txtIp">text</label><br>
+        <input id="txtIp" name="txtIp" type="text" placeholder="5자 이하" maxlength="5">
+        <br><br>
+        <label for="pwdIp">password</label><br>
+        <input id="pwdIp" name="txtPw" type="password" placeholder="4글자 이상" minlength="4"></label>
+        <br><br>
+        <label for="searchIp">search</label><br>
+        <input type="search" id="searchIp" name="search">
+        <br><br>
+        <label for="tlIp">tel</label>
+        <input type="tel" name="tel" id="tlIp">
+        <br><br>
+        <label for="colorIp">color</label>
+        <input type="color" name="color" id="colorIp"></label>
+        <br><br>
+        <!-- 년월일시분-->
+        <label for="datetime-localIp">날짜 시간 포함</label>
+        <input type="datetime-local" name="datetime-localIp" id="datetime-localIp">
+        <br><br>
+        <!-- 년월일-->
+        <label for="dateIp">날짜</label>
+        <input type="date" name="datetime-localIp" id="dateIp">
+        <br><br>
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+    </form>
+</body>
+</html>
