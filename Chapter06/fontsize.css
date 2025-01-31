@@ -1,0 +1,20 @@
+html{
+    font-size:14px;
+}
+
+div{
+    font-size:2em; /* 안쪽으로 들어갈 수록 2배씩 커진다*/
+    font-size:2rem; /* 안쪽으로 들어가도 똑같이 맨 위의 2배 크기이다.*/
+}
+
+p{
+    text-decoration: line-through underline overline;
+}
+
+span{
+    /* text-decoration: wavy underline tomato; 물결 선언 - wavy
+    text-decoration: dotted underline overline cyan; 점선 선언 - dotted
+    font-size가 아니라 text-decoration에 4px을 지정하였다.
+    text-decoration: dashed line-through rebeccapurple;
+    */
+}
