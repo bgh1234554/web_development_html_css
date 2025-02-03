@@ -1,0 +1,11 @@
+p {
+    /* text-align: right; */
+    /* text-align: justify;
+    color: brown;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 2em; */
+    text-indent: 1em;
+    text-indent: -1em;
+    /* 해당 경우 '웹'이라는 첫번째 글자가 브라우저 바깥으로 나가게 된다.*/
+}

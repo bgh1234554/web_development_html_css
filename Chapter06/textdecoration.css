@@ -1,0 +1,8 @@
+p {
+    text-decoration: blue wavy overline;
+    text-transform: capitalize;
+    /* text-transform: uppercase; */
+    /* text-transform: lowercase; 
+    다양한 값 집어넣어 보면서 직접 확인해보기.
+    */
+}

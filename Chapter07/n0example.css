@@ -1,0 +1,38 @@
+span{
+    background-color: red;
+    /* display: inline;
+    width:240px;
+    height:36px; */
+    /*가로 공간 차지하는 부분 관련 CSS 코드*/
+    /* display: inline-block;
+    width:200px;
+    height:50px; */
+
+    /*여백 지정 관련 부분
+    인라인 요소의 경우에는 마진 적용 시 여백이 옆쪽에만 생긴다.
+    패딩 적용 시에는 여백이 불완전하게 적용되어 겹치는 형태가 드러난다.
+    따라서 여백을 적용할 때는 inline-block을 적용하는 편이다.
+    */
+    display: inline-block;
+    /* width:200px; */
+    /* height:50px; */
+    /* margin: 20px; */
+    padding: 20px;
+}
+div{
+    background-color: blue;
+    /* display: inline-block; */
+    /* display:block;
+    width:120px; /*inline-block에만 이게 먹힌다.*/
+    /* height:36px; */
+    /* display: inline-block;
+    width:200px;
+    height:50px; */
+    /*해당 경우에 블록 요소가 다른 요소에 공간을 할당한다.*/
+    /* 여백 지정 관련 부분
+    블럭 요소의 경우엔는 상하좌우 모두에 마진이 생기는 것을 확인할 수 있다.
+    */
+    display:block;
+    /* margin: 20px; */
+    padding: 20px;
+}

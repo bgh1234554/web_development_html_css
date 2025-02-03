@@ -1,0 +1,23 @@
+ul{
+    list-style: "!";
+}
+/*
+비어있는 원 : circle
+차 있는 원 : disc -> 시작점에서 default 값
+차 있는 사각형 : square
+*/
+ol{
+    list-style: lower-greek;
+}
+/*
+decimal -> default값.
+lower-alpha
+upper-alpha
+알파벳 소문자, 대문자
+lower-roman, upper-roman
+로마 숫자
+*/
+
+ul>li:first-child{
+    list-style: "🤣🤣"
+}

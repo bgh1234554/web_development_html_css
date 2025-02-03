@@ -1,0 +1,8 @@
+p{
+    margin:8px;
+    display:inline-block;
+    /*inline 요소로 지정하더라도 오른쪽 빈공간이 채워지기는 한다.
+    다만, <br>태그로 줄바꿈하지 않은 모양이 그대로 남기 때문에 inline보다는 inline-block이 합리적이다.
+    
+    inline/block/inline-block의 특징을 잘 이해하고, 상황에 맞게 선택할 필요가 있다.*/
+}

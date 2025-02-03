@@ -17,4 +17,5 @@ span{
     font-size가 아니라 text-decoration에 4px을 지정하였다.
     text-decoration: dashed line-through rebeccapurple;
     */
+    text-decoration: dashed line-through rebeccapurple;
 }

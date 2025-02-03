@@ -1,0 +1,25 @@
+body{
+    background-color: bisque;
+}
+div{
+    background-color: greenyellow;
+    /* width:100%;
+    padding: 10px;
+    margin: 40px; */
+    /*마진 하나 지정 사례
+    padding: 0px; margin: 40px;*/
+    /*마진 2개 지정 사례*/
+    /* margin: 6vh 4vw;
+    /* padding: 0; /*첫번째 값: 세로 / 두번째 값: 가로 */
+    /*마진 4개 지정 사례 - 위쪽부터 시계방향*/
+    /* margin: 12px 24px 48px 96px;
+    padding: 0; */
+    /*마진 3개 지정 사례 - 위쪽, 좌우, 아래쪽
+    코드를 작성할 때 해석할 줄 아는 정도면 된다.*/
+    margin: 12px 24px 48px;
+    padding: 0;
+}
+p{
+    background-color: blueviolet;
+    width:75%;
+}
