@@ -1,0 +1,11 @@
+body{
+    text-align: center;
+}
+div{
+    width: 200px;
+    height: 200px;
+    background-color: deeppink;
+    margin: 0 auto;
+    /* 정사각형이 중간으로 이동한다. */
+    display: inline-block;
+}

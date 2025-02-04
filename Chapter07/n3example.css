@@ -1,8 +1,8 @@
 body{
     background-color: bisque;
 }
-div{
-    background-color: greenyellow;
+.div1{
+    background-color: skyblue;
     /* width:100%;
     padding: 10px;
     margin: 40px; */
@@ -16,10 +16,25 @@ div{
     padding: 0; */
     /*마진 3개 지정 사례 - 위쪽, 좌우, 아래쪽
     코드를 작성할 때 해석할 줄 아는 정도면 된다.*/
-    margin: 12px 24px 48px;
-    padding: 0;
+    /* margin: 12px 24px 48px;
+    padding: 0; */
+    
+    /*패딩 관련 수업 시작 (보통 마진 설정 후 패딩 설정을 시작함.)*/
+    /* margin: 0; 패딩 값이 하나인 경우
+    padding: 16px; */
+    /*패딩 2개 지정 사례 - 첫 번째값: 상하, 두번째 값: 좌우*/
+    /* padding: 0 2em; */
+    /*패딩 3개 지정 사례 - 위쪽, 좌우, 아래쪽*/
+    /* padding: 12px 24px 48px; */
+    margin: 24px;
+    padding: 16px;
 }
 p{
-    background-color: blueviolet;
+    background-color: teal;
     width:75%;
+}
+
+.div2{
+    background-color: mediumpurple;
+    margin: 24px; /*div1 아래쪽 마진, div2 위쪽 마진이 겹친다.*/
 }

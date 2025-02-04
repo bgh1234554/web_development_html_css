@@ -1,0 +1,200 @@
+        (어제 것에 이어서...)
+        2) 바깥쪽 여백 vs 안쪽 여백 :
+            여백의 개념이 박스 모델링에 잇어서 필수적인 부분에 해당한다.
+
+            2-1) margin 속성 :
+                마진 지정 방식
+                    (1) margin 값을 하나로 지정하는 방법 :
+                        기본적으로 여백은 모든 부분에 공통적으로 적용된다.
+                        ex) margin: 24px로 지정할 경우 컨텐츠 상하좌우 모든 방향에 24px의 margin 여백이 적용된다.
+                            em 지정의 경우에도 동일하다. 0의 경우에는 단위 지정이 필요 없다.
+                    (2) margin 값을 두개로 지정하는 방법 :
+                        첫 번째 값 : 컨텐츠 세로 영역
+                        두 번째 값 : 컨텐츠 가로 영역
+            
+            (20250204 작성)
+            2-2) padding 속성 :
+                컨텐츠의 안쪽 여백을 지정하는 방법 -> margin과 동일함.
+                    (1) padding 값을 하나로 지정하는 경우. 상하좌우
+                    (2) padding 값을 두 개로 지정하는 경우. 상하 / 좌우
+                    (3) padding 값을 네 개로 지정하는 경우. 위쪽부터 시계방향
+                    (4) padding 값을 세 개로 지정하는 경우. 위 / 좌우 / 아래
+                
+                    .div1 / .div2로 나누었을 때 확인해야 할 점
+                    (1) class selector 클래스 선택자를 다시 사용했다.
+                    (2) .div1에 margin: 24px, .div2에 margin: 24px을 먹이면,
+                    두 마진의 합인 48px이 마진으로 나타나지 않는다.
+                    -> 블록 요소의 위 아래 마진은 전후 블록 요소의 것과 상쇄된다.
+                    특정 요소가 더 긴 마진 값을 가지고 잇다면 더 긴 마진을 기준으로 생성된다.
+
+                    (n4marginpadding.html, css 참조 -> top/bottom/left/right 관련)
+
+                    *auto 값 : 너비가 지정된 블록 요소의 가로 방향에서 남은 공간을 자동으로 채우는 방식
+                        -> 블럭을 가운데로 정렬할 때 사용하면 좋음.
+                    
+                    (n5bexample.html, css 참조) (n6 marginauto.html, css 참조)
+                    margin: 0 auto;를 적용했을 때, auto 값을 가지고 중앙에 배치되는 것을 확인할 수 있다.
+                    -> div는 기본적으로 display: block이기 때문이다.
+                    -> 그래서 display: inline-block 시 적용되지 않는다.
+                    -> display: inline-block 후에 가운데에 위치시키고 싶다면?
+                    div태그의 부모 요소인 body 태그의 text-align 속성을 center로 지정하면 된다.
+
+                    이상의 결과에서 알 수 있는 점은, inline block 요소는 박스 형태를 유지하지만,
+                    inline 요소 처럼 text 흐름을 따라가기 때문에, 부모의 text-align을 통한
+                    배치가 가능하다.
+    
+        3) 테두리 속성 : 여태까지 잘 안 다뤘던 부분, 해당 요소를 강조할 때 사용.
+            3-1) border 속성 : 어떤 요소의 테두리 모양을 결정하는 CSS.
+            형식:
+                border : 2px solid black;
+                border : 0.5em dashed black;
+                border : 1.5vmin dotted red;
+
+                (n7border.html, css 참조)
+
+            3-2) box-sizing 속성 :
+                box-sizing: content-box;
+                width: 440px;
+                으로 작성한다고 했을 때, 박스에서 컨텐츠 영역 (마진과 패딩 제외)만
+                440px에 해당한다는 것을 의미한다.
+
+                box-sizing: border-box;
+                width: 440px;
+                으로 작성한다고 가정했을 때, 박스에서의 영역은 padding과 border를 포함하여 440px이다.
+                (보통 한 페이지를 만든다고 했을 때, 평소에 크기 계산을 content-box로 하느냐,
+                border-box로 하느냐가 정해져 있기 때문에 섞어서 사용할 일이 없다.)
+
+            3-3) border-radius 속성 :
+                박스 모델의 모서리를 둥글게 지정할 때 사용
+                    (1) 값을 하나로 지정하는 경우 - 상하좌우
+                    (2) 값을 두 개로 지정하는 경우
+                    - 첫 번째: 상단 왼쪽 / 하단 오른쪽, 두 번째: 상단 오른쪽 / 하단 왼쪽
+                    (3) 값을 네 개로 지정하는 경우 - 상단 왼쪽 모서리부터 시게방향으로 회전
+
+                    (n8borderradius.html, css 참조)
+            
+            3-4) overflow 속성 :
+                부모 요소보다 height / width가 큰 자식 요소를 나타내는 방법을 지정.
+                기본적으로 overflow는 auto로 설정되어 있다.
+                -> 자식 요소가 부모 요소보다 큰 경우 (가로, 세로 모두 포함해서) 스크롤 바를 자동으로 생성한다.
+
+                overflow: auto;
+                overflow: visible; -> 부모 영역을 벗어난 자식 요소를 그대로 보여준다.
+                overflow: hidden; -> 부모 영역을 벗어난 자식 요소를 아예 보여주지 않는다.
+                overflow: scroll; -> auto와 비슷하게 부모 영역을 넘어가면 스크롤 바를 생성한는데,
+                자식 요소가 부모 요소를 넘어가지 않더라도 일단 스크롤 바가 만들어진다.
+
+                Scroll을 지정해야할 필요성?
+                    자식 요소의 크기에 따라서 스크롤 바가 나타나기도/그렇지 않기도 하기 때문에,
+                    페이지의 가로 너비가 유동적으로 보이게 된다.
+                    즉, 어떤 요소를 "크기에 관계없이" 한 곳에 고정시켜 일관적으로 보여주고자 한다면
+                    scroll 속성을 지정하여 무조건 나타나도록 하는 편이 나을 수도 있다.
+                
+                overflow-x / overflow-y 가로 세로를 따로따로 지정하는 것도 가능하다.
+        
+        4) 박스 그림자 속성:
+            box-shadow: (inset 여부) offset-x offset-y (blur-radius) (spread-radius) color;
+
+                spread-radius - 음수 값을 지정할 수 있는데, 그 경우 그림자의 크기가 상자보다 작아진다.
+                inset - 박스의 안쪽에 그림자를 만드는 효과
+                blur-radius - 박스 사이즈를 침범하여 그림자를 만드는 효과
+
+                (n9boxshadow.html css 참조)
+
+                그림자 효과를 설정하는 사이트 사례 - https://shadows.brumm.af/
+                그림자를 여러 모양으로 조절할 수 있는 도구를 보여주는데,
+                마우스로 박스 영역의 그림자를 조절하는 수치에 따라서 그에 맞는 CSS 코드를 보여준다.
+
+    3. 색 표현하기
+        CSS는 색을 표현하는 다양한 방식을 제공한다. 상황에 맞춰 취사선택하면 된다.
+
+        1) 색 표현 방법
+            1-1) Keyword : 색상 이름을 그대로 명시하는 방법.
+                구글링하면 잘 나온다.
+
+            1-2) RGB / RGBA : 빛의 삼원색을 조합해 색을 나타내는 방법
+            수치 : 0~255, 퍼센트 : 수치 255가 100%에 해당한다.
+
+            A는 Alpha 값. -> 불투명도를 나타낸다.
+            ex) rbga(0,0,0,255) -> 검은색인데 25%의 불투명도를 지니기 때문에 회색으로 보인다.
+
+            1-3) HEX : 16진수로 표현한 RGB값
+            #FFFFFF -> rgb(255,255,255)로 하얀색을 의미함.
+
+            1-4) HSL(A): 색상, 채도, 명도, 알파값을 순서대로 표기한 것.
+                채도 - 색이 얼마나 분명하게 나타나는 지
+                명도 - 색의 밝은 정도.
+
+                (n10csscolour.html, n10csscolour.css 참조)
+    
+    4. 배경 꾸미기
+    : 원하는 색을 지정하거나 이미지를 원하는대로 배치하는 등의 역할.
+        배경 관련 속성 키
+        "background-"에 해당하는 속성명을 지닌다.
+
+        4-1. 이미지를 배경에 사용하기
+            1) background-image 속성 :
+                배경에 색상을 지정하는 대신에 특정 이미지 파일을 넣고 싶을 때,
+                background-image 속성에 해당 이미지가 있는
+                절대 경로 / 상대 경로를 URL 값으로 지정할 수 있다.
+            
+            https://showcases.yalco.kr/html-css/02-08/01.html
+
+            2) background-repeat 속성:
+                배경 크기(위 사이트 기준으로는 div)가 삽입한 이미지보다 큰 경우,
+                삽입한 이미지를 가로,세로로 반복해서 나타낸다.
+                background-repeat: repeat;가 기본값.
+                no-repeat - 한번만 나타난다.
+                repeat-x - 가로로만 반복, repeat-y - 세로로만 반복.
+                space - 배경의 모서리를 먼저 채우고, 남는 부분을 비율에 맞춰서 집어넣음 (잘 안씀)
+                round - 이미지 안잘리고 채워넣어줌.
+                repeat-space - 가로로는 repeat이고 잘린다. 세로는 space라서 안잘린다.
+                    (세로 쪽으로는 비율에 맞게 집어넣는다.)
+                round no-repeat - 가로로는 안잘리고 채우고, 세로로는 반복이 없으니 한번만 나온다.
+
+            3) background-position 속성 (no-repeat 기준)
+                top/bottom/left/right/center는 말 그대로임.
+                center - 50% 50%와 동일하다.
+                ex) bottom 10px right 3vw
+                (bottom에서 10px 위로, right에서 3vw 오른쪽으로.
+                해석하는 방식만 알아두면 된다.)
+            
+            4) background-size 속성:
+                배경 이미지 크기 지정 (퍼센트나 픽셀(가로 세로)로 지정이 가능하다.)
+                (이때 퍼센트는 기존 이미지의 퍼센트이지, div의 퍼센트가 아니다.)
+                background-size: auto; -> 이미지의 원래 크기대로 표현.
+                background-size: contain; -> 전체의 div 영역에서 긴 부분 영역을 자동을 맞춰준다.
+                    background-position: center;와 함께 사용할 경우 가운데에 하나의 이미지가 고정된 형태가 되기 때문에,
+                    여러 사이트에서 사용하는 경우가 많다.
+                background-size: cover; -> div 사이즈만큼 여백 공간을 남기지 않고 해당 이미지로 전부 채울 경우 사용.
+                    (단, 사진 크기에 따라 가로세로가 잘릴 수 있다.)
+
+            (CHAPTER 8 -> n1background.html, css 참조)
+
+        4-2. 배경에 그라데이션 넣기 :
+                두 가지 이상의 색을 사용하여 두 색을 점점 변화시켜가며 채색하는 방법
+                (n2gradient.html, css 참조)
+            
+        4-3. 포지셔닝 :
+            HTML로 만든 웹페이지는 하나의 기기로만 여는 것이 아니라, 위치값이 상대적이다.
+            상대적인 요소를 잡는데 포지셔닝이 중요한 역할을 한다.
+
+            1. position 속성 :
+                https://showcases.yalco.kr/html-css/02-09/01.html 참조
+
+                사이트 내부를 확인했을 때
+                커다란 div(class=container) 내에 8개의 회색 div와
+                오렌지색 div(class=orange)가 있고, 오렌지색 div 내부에 더 작은 div(class=red)가 있다.
+
+                orange / red를 움직이면서 position 개념을 학습 예정.
+
+                position 속성의 경우 HTML 요소들이 해당 페이지에서 어떻게 배치될지를 지정한다.
+                    -> 중요한점 - 부모 요소의 속성이 자식에 상속되지 않는다.
+                    (font-size와 같은 것들은 자식에게 em이라는 상대값 형태로 상속이 되었다.)
+
+                    1) static - top 30px left 30px을 입력하더라도, 페이지 상에 변화가 없다.
+                    즉, static의 경우에는 원래 존재하는 페이지의 요소대로 따르기 때문에 위치 속성
+                    지정을 하더라도 소용이 없다. -> 말 그대로 static(정적)인 상태.
+
+                    2) relative - 원래 있던 위치를 기준으로 top / left / right 등의 속성값이 유지된다.
+                    -> 요소 위치는 이동하늗네 공백 위치는 그대로 유지된다. 회색 상자들은 안움직인다.

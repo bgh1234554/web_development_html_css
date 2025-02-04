@@ -1,0 +1,9 @@
+div{
+    width: 200px;
+    height: 200px;
+    background-color: deepskyblue;
+    border: 5px solid blue;
+    box-sizing: content-box;
+    box-sizing: border-box; /*이렇게 하면 border 합쳐서 200px*/
+    border-radius: 50%; /*이렇게 하면 원이 된다.*/
+}

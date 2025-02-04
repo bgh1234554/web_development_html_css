@@ -1,0 +1,9 @@
+ul>li:not(:last-child){
+    border-bottom: 1px dashed black;
+    /*solid dotted를 대신 사용할 수 있다.*/
+}
+
+ul>li:not(:first-child){
+    border-top: 2px dotted crimson;
+    /* top bottom left right가 있고, border 쓰면 당연히 상하좌우 모두 생긴다.*/
+}
