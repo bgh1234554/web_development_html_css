@@ -1,0 +1,50 @@
+body{
+    margin:0;
+}
+
+/* id 선택자 */
+#container{
+    display:flex;
+    flex-direction: column;
+    background-color: aqua;
+    height: 100vh; /* viewpoint height 100% - 화면 전체라는 뜻*/
+
+}
+
+#header{
+    display: flex;
+    /*디렉션이 컬럼이라 밑으로 늘어진다.*/
+    flex-basis: 100px;
+    align-items: flex-end;
+    padding: 12px;
+    background-color: plum;
+    gap: 12px;
+}
+
+/* header 자식 노드 전체*/
+#header > *{
+    background-color: yellow;
+    padding: 12px 0px; /* 상하 좌우 */
+    text-align: center;
+}
+
+#header > *:first-child{
+    flex-basis: 100px;
+}
+
+#header > *{
+    flex-grow: 1; /*남은 공간을 혼자 다 먹는다 */
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#content{
+    padding: 24px;
+    background-color: darkblue;
+    color: white;
+}
