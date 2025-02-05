@@ -48,3 +48,9 @@ body{
     background-color: darkblue;
     color: white;
 }
+
+#footer{
+    flex-basis: 60px;
+    background-color: tomato;
+    /* 맨 밑에 회사 전화번호나 주소, CopyRight 적을 때 많이 사용한다.*/
+}

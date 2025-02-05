@@ -10,6 +10,8 @@
             오렌지색 div(class=orange)가 있고, 오렌지색 div 내부에 더 작은 div(class=red)가 있다.
 
             orange / red를 움직이면서 position 개념을 학습 예정.
+            (참고 사이트에는 태그에 style 속성에 "position: absolute; top: -10px; left: -10px;"
+            와 같은 방법으로 바로 인라인 스타일로 구현하였다.)
 
             position 속성의 경우 HTML 요소들이 해당 페이지에서 어떻게 배치될지를 지정한다.
                 -> 중요한점 - 부모 요소의 속성이 자식에 상속되지 않는다.
@@ -36,9 +38,9 @@
 
                 -> 한칸씩 밀려 들어와 있다 -> 그래서 눈에 보이는 사각형이 8개밖에 없다.
             
-                4) fixed - 항상 부모 요소가 아니라 뷰포트 (viewport)를 기준으로 한다.
-                특징 : 스크롤을 내려도 화면에 보이는 위치가 고정된다.
-                    특정 요소들의 경우에는
+                4) fixed : 항상 부모 요소가 아니라 뷰포트(viewport)를 기준으로 합니다.
+                특징 : 스크롤에 영향을 받지 않는다
+                -> navigation bar와 같은 경우에는 스크롤을 내리더라도 존재해야 하기 때문에 응용이 된다.
 
                 5) sticky - 어떤 요소가 스크롤로 이동할 수 있는 공간을 top, bottom, left, right z-order로 지정.
                 (fixed와 달리 어느순간 스크롤로 내려가다가 stop된다.)
@@ -128,27 +130,27 @@
     2) 자식 요소에 적용하는 flex
     참조 사이트 - https://showcases.yalco.kr/html-css/02-11/02.html
 
-    flex-basis: 메인 축의 길이(flex-direction이 row면 x축, column이면 y축)
-    flex-grow: 빈 공간을 채울지 여부, 그리고 채울 시 다른 아이템들의 동 속성값에 비례해서 공백을 나눠갖는다. 기본값은 0이다.
-    flex-shrink: 전체 공간이 부족할 때, 해당 아이템의 길이가 컨텐츠의 너비 또는 flex-basis로 지정한 값보다 작아질 수 있을지를
-        지정한다. 기본값은 1이며, 증가할수록 길이가 많이 줄어든다.
-    
-    flex 레이아웃을 지정할 때는 flex-basis/grow/shrink와 같이 속성값을 하나하나 지정할 수 있는데,
-    flex 내의 여러 개의 값을 작성해서 CSS 코드 한줄짜리로 만들기도 한다.
+        flex-basis: 메인 축의 길이(flex-direction이 row면 x축, column이면 y축)
+        flex-grow: 빈 공간을 채울지 여부, 그리고 채울 시 다른 아이템들의 동 속성값에 비례해서 공백을 나눠갖는다. 기본값은 0이다.
+        flex-shrink: 전체 공간이 부족할 때, 해당 아이템의 길이가 컨텐츠의 너비 또는 flex-basis로 지정한 값보다 작아질 수 있을지를
+            지정한다. 기본값은 1이며, 증가할수록 길이가 많이 줄어든다.
+        
+        flex 레이아웃을 지정할 때는 flex-basis/grow/shrink와 같이 속성값을 하나하나 지정할 수 있는데,
+        flex 내의 여러 개의 값을 작성해서 CSS 코드 한줄짜리로 만들기도 한다.
 
-    (예시)
-    flex: (flex-grow 값);
-    flex: (flex-grow 값) (flex-basis 값);
-    flex: (flex-grow 값) (flex-shrink 값) (flex-basis 값);
-    
-    3) order : 부모 컨테이너 안에서 여러 개의 자식 요소들이 있을 때 순서를 임의로 바꿀 수 있다.
-    (우선순위를 정하는 속성 느낌.)
+        (예시)
+        flex: (flex-grow 값);
+        flex: (flex-grow 값) (flex-basis 값);
+        flex: (flex-grow 값) (flex-shrink 값) (flex-basis 값);
+        
+        order : 부모 컨테이너 안에서 여러 개의 자식 요소들이 있을 때 순서를 임의로 바꿀 수 있다.
+        (우선순위를 정하는 속성 느낌.)
 
-    참고 사이트 - https://showcases.yalco.kr/html-css/02-11/04.html
+        참고 사이트 - https://showcases.yalco.kr/html-css/02-11/04.html
 
-    (Chapter 9 폴더의 n1flex.html, n1flex.css 참조)
+        (Chapter 9 폴더의 n1flex.html, n1flex.css 참조)
 
-    4) 요소를 감추는 방법들:
+    3) 요소를 감추는 방법들:
         웹 페이지 내에서는 필요에 따라서 특정 요소를 보이게끔 / 보이지 않게끔 조절할 필요가 있음.
         a. 원래 보이던 요소를 투명하게 바꾸는 것
         b. 요소가 안보이면서 + 적용 기능을 없애는 것.
